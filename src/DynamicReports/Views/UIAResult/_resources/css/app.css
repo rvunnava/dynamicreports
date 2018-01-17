@@ -1,0 +1,48 @@
+﻿* 
+{
+    margin:0; 
+    padding:0; 
+}
+
+html
+{    
+    height: 100%;    
+    width:100%;  
+}
+
+body
+{
+    width:100%;    
+    height: 100%;
+}
+
+.navbar 
+{
+    border-radius: 0px;
+}
+
+.main-container{
+    width:90%;
+}
+
+
+.report-body .th {
+    font-weight:bold;
+}
+
+
+.report-body .td, .report-body .th {
+    padding: .75rem;
+}
+
+.report-body .tr{
+    border-bottom: 1px solid #ddd;
+}
+
+.report-body .test-rows .status .label{
+    font-size:14px !important;
+}
+
+.test-details-tabs{
+    margin-bottom:30px;
+}

@@ -1,0 +1,63 @@
+{
+  "headers": {
+    "Browser": "chrome",
+    "Environment": "QA",
+    "URL": "http://commercial-ui.qa.taxsaas.io/"
+  },
+  "suite": {
+    "id": null,
+    "name": "TestSuite",
+    "status": "fail",
+    "testList": [
+      {
+        "id": "0",
+        "name": "BaseTest",
+        "description": "Intialize driver",
+        "steps": [
+          {
+            "stepNo": 0,
+            "description": null,
+            "expected": null,
+            "actual": "Navigated to URL: http://commercial-ui.qa.taxsaas.io/",
+            "status": 1
+          }
+        ],
+        "logs": [
+          {
+            "className": "BaseElement",
+            "method": "init",
+            "message": "Intailized static params",
+            "description": ""
+          }
+        ],
+        "status": "fail",
+        "group": null
+      },
+      {
+        "id": "0",
+        "name": "BaseTest",
+        "description": "Intialize driver",
+        "steps": [
+          {
+            "stepNo": 0,
+            "description": null,
+            "expected": null,
+            "actual": "Navigated to URL: http://commercial-ui.qa.taxsaas.io/",
+            "status": 1
+          }
+        ],
+        "logs": [
+          {
+            "className": "BaseElement",
+            "method": "init",
+            "message": "Intailized static params",
+            "description": ""
+          }
+        ],
+        "status": "fail",
+        "group": null
+      }
+
+    ]
+  }
+}

@@ -1,0 +1,138 @@
+﻿<!--  Report Suite Header -->
+<template id="report-header" type="text/template">
+    <div class="jumbotron">
+        <div class="header-content pull-left">
+            <table class="table table-bordered col-md-6 col-xs-12">
+                <tbody>
+                    <tr>
+                        <th>Environment</th>
+                        <td>{{headers.environment}}</td>
+                    </tr>
+                    <tr>
+                        <th>Browser</th>
+                        <td>{{headers.browser}}</td>
+                    </tr>
+                    <tr>
+                        <th>Run Date</th>
+                        <td>{{headers.dtTime}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</template>
+
+<!--  Report suite Content -->
+<template id="report-content" type="text/template">
+    <div class="list-head row tr hidden-xs">
+        <div class="id col-lg-1 th">ID</div>
+        <div class="name col-lg-2 th">Name</div>
+        <div class="description col-lg-7 th">Description</div>
+        <div class="status col-lg-1 th">Status</div>
+        <div class="date col-lg-1 th">Execution Time</div>
+    </div>
+    <div class="test-rows">
+        {{#testList}}
+        <div class="row tr">
+            <div class="id col-lg-1 col-md-1 col-xs-10 td">{{id}}</div>
+            <a href="#/test/{{id}}"><div class="name col-lg-2 col-md-2 col-xs-10 td">{{name}}</div></a>
+            <div class="description col-lg-7 col-md-7 col-xs-10 td">{{description}}</div>
+            <div class="status col-lg-1 col-md-1 col-xs-10 td">
+                <span class="label label-{{statusClass}}">{{status}}</span>
+            </div>
+            <div class="date col-lg-1 col-md-1 col-xs-10 td">{{runDate}}</div>
+        </div>
+        {{/testList}}
+    </div>
+</template>
+
+
+<!--  TestDetails - Header -->
+<template id="test-details-header" type="text/template">
+    <div class="header-content pull-left">
+        <table class="table table-bordered col-md-6 col-xs-12">
+            <tbody>
+                <tr>
+                    <th>Test ID</th>
+                    <td>{{id}}</td>
+                </tr>
+                <tr>
+                    <th>Test Case</th>
+                    <td>{{name}}</td>
+                </tr>
+                <tr>
+                    <th>Description</th>
+                    <td>{{description}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="clearfix"></div>
+</template>
+
+<!--  Test Details -->
+<template id="test-details-body" type="text/template">
+    <div class="test-details-tabs">
+        <ul class="nav nav-pills pull-right" role="tablist">
+            <li role="presentation" class="active">
+                <a href="#steps" aria-controls="home" role="tab" data-toggle="tab">Steps</a>
+            </li>
+            <li role="presentation">
+                <a href="#logs" aria-controls="profile" role="tab" data-toggle="tab">Logs</a>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="steps">
+            <div class="list-head row tr hidden-xs">
+                <div class="stepNo col-lg-1 col-md-1 th">StepNo</div>
+                <div class="description col-lg-3 col-md-4 th">Description</div>
+                <div class="expected col-lg-3 col-md-2 th">Expected</div>
+                <div class="actual col-lg-3 col-md-2 th">Actual</div>
+                <div class="status col-lg-1 col-md-1 th">Status</div>
+                <div class="runDate col-lg-1 col-md-1 th">Execution Time</div>
+            </div>
+            <div class="test-steps">
+                {{#steps}}
+                <div class="row tr">
+                    <div class="stepNo col-lg-1 col-md-1 col-xs-10 td">{{stepNo}}</div>
+                    <div class="description col-lg-3 col-md-4 col-xs-10 td">{{description}}</div>
+                    <div class="expected col-lg-3 col-md-2 col-xs-10 td">{{expected}}</div>
+                    <div class="actual col-lg-3 col-md-2 col-xs-10 td">{{actual}}</div>
+                    <div class="status col-lg-1 col-md-1 col-xs-10 td">{{status}}</div>
+                    <div class="runDate col-lg-1 col-md-1 col-xs-10 td">{{runDate}}</div>
+                </div>
+                {{/steps}}
+            </div>
+        </div>
+
+        <div role="tabpanel" class="tab-pane collapse" id="logs">
+            <div class="list-head row tr hidden-xs">
+                <div class="stepNo col-lg-1 col-md-1 th">Class</div>
+                <div class="description col-lg-2 col-md-2 th">Method</div>
+                <div class="expected col-lg-2 col-md-2 th">Category</div>
+                <div class="actual col-lg-6 col-md-6 th">Message</div>
+                <div class="status col-lg-1 col-md-1 th">Date</div>
+            </div>
+            <div class="test-logs">
+                {{#logs}}
+                <div class="row tr">
+                    <div class="className col-lg-1 col-md-1 col-xs-10 td">{{className}}</div>
+                    <div class="method col-lg-2 col-md-2 col-xs-10 td">{{method}}</div>
+                    <div class="message col-lg-2 col-md-2 col-xs-10 td">{{category}}</div>
+                    <div class="description col-lg-6 col-md-6 col-xs-10 td">{{message}}</div>
+                    <div class="logDate col-lg-1 col-md-1 col-xs-10 td">{{logDate}}</div>
+                </div>
+                {{/logs}}
+            </div>
+        </div>
+    </div>
+</template>
+
+
+
+
+
+
